@@ -2,13 +2,29 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8">
-  <meta author="Finn Porter">
-  <title>Blizzard API</title>
+  <meta name="author" content="Finn Porter">
+  <link rel="shortcut icon" href="public/img/favicon.ico"/> <!-- why does this not display? -->
+  <link href="https://fonts.googleapis.com/css?family=Oleo+Script|Rubik:400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <title>Leeroy's Pwn Shop</title>
   <script src="index.js"></script>
   <script src="display.js"></script>
 </head>
 <body>
-  <h1>Blizzard API</h1>
-  <div id="item-names"></div>
-</body>
-</html>
+  <h1>Leeroy's Pwn Shop</h1>
+  <div class="table-div">
+    <table>
+      <tr>
+        <th>Product ID</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th></th>
+        <th>Buy Price</th>
+        <th>Sell Price</th>
+      </tr>
+      <tr id="product-table">
+      </tr>
+    </table>
+    <div id="item-names"></div>
+  </body>
+  </html>
