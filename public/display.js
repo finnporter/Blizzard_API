@@ -11,7 +11,7 @@ var addTableHeads = function() {
 };
 
 var displayNames = function(item) {
-  console.log("display item:", item)
+  //console.log("display item:", item)
 
   var table = document.querySelector('#table');
   var tr = document.createElement('tr');
