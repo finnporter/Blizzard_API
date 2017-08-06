@@ -10,8 +10,9 @@ var addTableHeads = function() {
   })
 };
 
-var displayNames = function(item) {
+var displayProduct = function(item) {
   //console.log("display item:", item)
+  //localStorage.setItem('product', JSON.stringify(item));
 
   var table = document.querySelector('#table');
   var tr = document.createElement('tr');

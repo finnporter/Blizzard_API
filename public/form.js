@@ -1,7 +1,8 @@
-var getProductId = function() {
-  console.log("getProductID gets called")
+var getProductId = function(evt) {
+  evt.preventDefault();
 
-  var form = document.getElementById('input').value;
-
-      console.log(form)
+  var product = document.querySelector('#id').value;
+  localStorage.setItem('product', JSON.stringify(product));
+  console.log(product)
+  getItemNumber(product);
 };

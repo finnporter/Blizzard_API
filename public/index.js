@@ -26,20 +26,17 @@ var requestComplete = function() {
   var jsonString = this.responseText;
   item = JSON.parse(jsonString);
 
-  displayNames(item);
+  displayProduct(item);
 };
 
 var app = function() {
-  addTableHeads();
 
+
+  addTableHeads();
   getItemNumber(128862);
-  getItemNumber(13937);
-  getItemNumber(71466);
-  getItemNumber(18348);
-  getItemNumber(39769);
 
   var form = document.getElementById('form');
-  form.addEventListener('submit', console.log);
+  form.addEventListener('submit', getProductId);
   //why does getProductId not get called?
 }
 
