@@ -29,8 +29,12 @@ var requestComplete = function() {
 };
 
 var app = function() {
+  addTableHeads();
   getItemNumber(128862);
-  getItemNumber(46182);
+  getItemNumber(13937);
+  getItemNumber(71466);
+  getItemNumber(18348);
+  getItemNumber(39769);
 }
 
 window.addEventListener('load', app);
