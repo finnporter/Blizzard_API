@@ -2,14 +2,16 @@ var getProductId = function(evt) {
   evt.preventDefault();
 
   var id = document.querySelector('#id').value;
-  console.log(id)
-  var products = [];
-  products.push(id);
-  //storeItems(products)
-  getItemNumber(id);
+  storeItems(id)
 };
 
-var storeItems= function(products) {
-  console.log(products)
-  localStorage.setItem('product', JSON.stringify(products));
+var storeItems= function(id) {
+  var productsArray = [];
+  console.log(productsArray)
+  productsArray.push(id);
+
+  productsArray.forEach(function(productId) {
+  localStorage.setItem('products', JSON.stringify(productId));
+  generateURL(productId);
+  })
 }

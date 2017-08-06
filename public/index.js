@@ -1,7 +1,7 @@
 var generateURL = function(itemId) {
-    var url = "https://eu.api.battle.net/wow/item/" + itemId + 
-    "?locale=en_GB&apikey=4zjnbjyxkhpnwyhhf7xh7dagxkqu8vbd"
-    makeRequest(url, requestComplete);
+  var url = "https://eu.api.battle.net/wow/item/" + itemId + 
+  "?locale=en_GB&apikey=4zjnbjyxkhpnwyhhf7xh7dagxkqu8vbd"
+  makeRequest(url, requestComplete);
 }
 
 var makeRequest = function(url, callback) {
@@ -23,10 +23,12 @@ var requestComplete = function() {
 
 var app = function() {
 
-  var result = localStorage.getItem('product');
-  if (result !== null) {
-    result = JSON.parse(result)
-    getItemNumber(result);
+  var productIds = localStorage.getItem('product');
+  if (productIds !== null) {
+    productIds.forEach(function(productId) {
+      productId = JSON.parse(productId)
+      getItemNumber(productId);
+    })
   }
 
   addTableHeads();
