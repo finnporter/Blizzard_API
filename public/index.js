@@ -1,7 +1,3 @@
-var getItemNumber = function(itemId) {
-  generateURL(itemId)
-}
-
 var generateURL = function(itemId) {
     var url = "https://eu.api.battle.net/wow/item/" + itemId + 
     "?locale=en_GB&apikey=4zjnbjyxkhpnwyhhf7xh7dagxkqu8vbd"
@@ -34,7 +30,7 @@ var app = function() {
   }
 
   addTableHeads();
-  getItemNumber(128862);
+  generateURL(128862);
 
   var form = document.getElementById('form');
   form.addEventListener('submit', getProductId);
